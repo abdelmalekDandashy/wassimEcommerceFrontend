@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class CommonService {
-  public APIUrl = 'https://localhost:44358/api/Data';
+  public APIUrl = 'https://localhost:5001/api/Data';
   public ticket = '';
   Is_Logged_In = new BehaviorSubject<boolean>(false);
   UI_Direction = new BehaviorSubject<string>('ltr');
