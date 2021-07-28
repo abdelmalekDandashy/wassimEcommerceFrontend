@@ -44,6 +44,11 @@ export class MenuComponent implements OnInit {
     m.route = 'category';
     this.entries.push(m);
 
+    m = new menumodel();
+    m.fa_icon = 'fa fa-user-alt';
+    m.title = 'user Account';
+    m.route = 'userAccount';
+    this.entries.push(m);
   }
 
 }

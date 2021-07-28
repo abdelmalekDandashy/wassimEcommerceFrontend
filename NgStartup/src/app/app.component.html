@@ -1,6 +1,9 @@
 <div [dir]='ui_direction'>
   <div class="d-flex justify-content-center">
     <router-outlet></router-outlet>
+    <!-- <app-user></app-user> -->
+    <!-- <app-product></app-product> -->
+
   </div>
   <app-logout *ngIf='(Show_Logout$ | async)' style='position:fixed;bottom:20px;right:20px'>
   </app-logout>

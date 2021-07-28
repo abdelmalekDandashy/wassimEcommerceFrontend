@@ -25,6 +25,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SignalRService } from './core/Services/SignalRService';
 import { ProductComponent } from './components/Product/product.component';
 import { CategoryComponent } from './components/Category/category.component';
+import { User_accountComponent } from './components/User_account/user_account.component';
+
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -39,7 +41,9 @@ export function createTranslateLoader(http: HttpClient) {
     DirectionsMapDirective,
     MenuComponent,
     ProductComponent,
-    CategoryComponent
+    CategoryComponent,
+    User_accountComponent,
+
   ],
   entryComponents: [
     DeleteConfirmationComponent
