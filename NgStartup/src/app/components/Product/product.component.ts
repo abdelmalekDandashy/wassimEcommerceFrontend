@@ -74,6 +74,7 @@ export class ProductComponent implements OnInit, OnDestroy {
                         });
                     }
                     this.data.push(element);
+                    console.log(this.data);
                 });
             }
         });
