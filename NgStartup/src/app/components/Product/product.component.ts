@@ -6,13 +6,12 @@ import { MatDialog } from '@angular/material';
 import {
     Proxy,
     Product,
-    User,
     Params_Get_Product_By_Where,
     Params_Delete_Product,
     Params_Delete_Uploaded_file,
     Category,
     Params_Get_Category_By_OWNER_ID,
-    Params_Get_User_By_OWNER_ID,
+
 
 } from '../../core/services/proxy.service';
 import { DeleteConfirmationComponent } from '../delete-confirmation/delete-confirmation.component';
@@ -29,11 +28,8 @@ export class ProductComponent implements OnInit, OnDestroy {
     data: Product[] = [];
 
     CategoryList: Category[];
-    UserList: User[];
     _params_Get_Category_By_OWNER_ID = new Params_Get_Category_By_OWNER_ID();
-    _params_Get_User_By_OWNER_ID = new Params_Get_User_By_OWNER_ID();
     Get_Category_By_OWNER_ID_Subscription = new Subscription();
-    Get_User_By_OWNER_ID_Subscription = new Subscription();
 
 
 
@@ -43,9 +39,8 @@ export class ProductComponent implements OnInit, OnDestroy {
         this.searchModel.START_ROW = 0;
 
         this._params_Get_Category_By_OWNER_ID.OWNER_ID = 1;
-        this._params_Get_User_By_OWNER_ID.OWNER_ID = 1;
-        this.Get_Category_By_OWNER_ID_Subscription = this.proxy.Get_Category_By_OWNER_ID(this._params_Get_Category_By_OWNER_ID).subscribe(result => console.log(result));
-        this.Get_User_By_OWNER_ID_Subscription = this.proxy.Get_User_By_OWNER_ID(this._params_Get_User_By_OWNER_ID).subscribe(result => console.log(result));
+        this.Get_Category_By_OWNER_ID_Subscription = this.proxy.Get_Category_By_OWNER_ID(this._params_Get_Category_By_OWNER_ID).subscribe(result => this.CategoryList = result);
+
 
 
         this.fetchData();
@@ -74,7 +69,6 @@ export class ProductComponent implements OnInit, OnDestroy {
                         });
                     }
                     this.data.push(element);
-                    console.log(this.data);
                 });
             }
         });

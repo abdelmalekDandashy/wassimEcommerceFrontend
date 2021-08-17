@@ -6,7 +6,8 @@ import { CanActivateThisRoute } from '../Guard/RouterGuard';
 import { MenuComponent } from '../../components/menu/menu.component';
 import { ProductComponent } from '../../components/Product/product.component';
 import { CategoryComponent } from '../../components/Category/category.component';
-import { User_accountComponent } from '../../components/User_account/user_account.component';
+// import { User_accountComponent } from '../../components/User_account/user_account.component';
+// import { ProductsComponent } from '../../components/products/products.component';
 
 
 export const routes: Routes = [
@@ -14,7 +15,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'product', component: ProductComponent },
   { path: 'category', component: CategoryComponent },
-  { path: 'userAccount', component: User_accountComponent },
+  // { path: 'userAccount', component: User_accountComponent },
   { path: 'logout', component: LogoutComponent },
   { path: '**', component: LoginComponent }
 ];

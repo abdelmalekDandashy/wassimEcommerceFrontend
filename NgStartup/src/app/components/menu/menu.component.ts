@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
 
     m = new menumodel();
     m.fa_icon = 'fa fa-product-hunt';
-    m.title = 'Product';
+    m.title = 'product';
     m.route = 'product';
     this.entries.push(m);
 

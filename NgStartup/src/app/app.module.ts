@@ -25,7 +25,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SignalRService } from './core/Services/SignalRService';
 import { ProductComponent } from './components/Product/product.component';
 import { CategoryComponent } from './components/Category/category.component';
-import { User_accountComponent } from './components/User_account/user_account.component';
+// import { User_accountComponent } from './components/User_account/user_account.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -42,7 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
     MenuComponent,
     ProductComponent,
     CategoryComponent,
-    User_accountComponent,
+    // User_accountComponent,
 
   ],
   entryComponents: [
